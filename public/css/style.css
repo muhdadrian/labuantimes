@@ -1,0 +1,178 @@
+/* :root {
+  --primary: #ffefef;
+  --bg:#f34;
+} */
+
+* {
+    font-family: "Poppins", serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: 0;
+    outline: none;
+    border: none;
+    text-decoration: none;
+}
+
+a:link,
+a:visited,
+a:hover,
+a:active {
+    text-decoration: none;
+}
+
+.header-time {
+    display: flex;
+    flex-direction: row;
+}
+
+.time {
+    font-size: 1rem;
+    background-color: aqua;
+    padding-top: -2rem;
+    text-align: right;
+}
+
+.header {
+    text-align: center;
+    font-size: 4.5rem;
+    text-align: center;
+    font-family: "canterburyregular", Arial, Helvetica, sans-serif;
+    color: black;
+    text-shadow: 1px 2px 3px rgb(168, 166, 166);
+    /* background-color: antiquewhite; */
+    /* margin-top: -1rem; */
+}
+
+.paper {
+    text-align: center;
+    margin-top: -1rem;
+    font-family: "Poppins";
+    font-weight: 200;
+    /* background-color: aqua; */
+}
+
+.navbar-top {
+    margin-top: 1rem;
+}
+
+li .nav-link {
+    font-size: 1.3rem;
+    font-weight: 200;
+    /* font-family: "Poppins", serif; */
+    /* background-color: red; */
+}
+
+ul li a .text-white {
+    color: white;
+}
+
+/* .home-page {
+  font-family: 'Poppins', serif;
+  font-weight: 100;
+  font-size: 20px;
+  font-size: 0.1rem;
+}  */
+
+@font-face {
+    font-family: "canterburyregular";
+    src:
+        url("canterbury-webfont.woff2") format("woff2"),
+        url("canterbury-webfont.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "open_sansregular";
+    src: url("OpenSans-Regular-webfont.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+}
+
+.carousel-item {
+    transition:
+        transform 2s ease,
+        opacity 0.5s ease-out;
+}
+
+.carousel-item img {
+    object-fit: cover;
+    height: 500px;
+}
+
+.slider-title,
+.slider-text {
+    font-family: "Poppins", serif;
+}
+
+.second-title,
+.second-text {
+    font-family: "Poppins", serif;
+}
+
+.third-title,
+.third-text {
+    font-family: "Poppins", text;
+}
+
+.fourth-title,
+.fourth-text {
+    font-family: "Poppins", text;
+}
+
+.card .img-height {
+    height: 100%;
+}
+
+.second-image {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.space {
+    height: 1rem;
+}
+
+.third-img {
+    object-fit: cover;
+    height: 500px;
+}
+
+footer {
+    margin-top: 2rem;
+}
+
+.social-media {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    /* text-decoration: none; */
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    /* background-color: aqua; */
+    gap: 1.5rem;
+}
+
+.social-media a {
+    text-decoration: none;
+    font-family: "Poppins", serif;
+    font-weight: 300;
+}
+
+.youtube {
+    color: red;
+}
+
+.about,
+.contact {
+    color: black;
+}
+
+.copyright {
+    text-align: center;
+    margin-top: 1.5rem;
+    font-family: "Poppins", serif;
+    font-weight: 200;
+}
