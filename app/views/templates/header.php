@@ -49,10 +49,10 @@
                 <a class="nav-link active text-white" aria-current="page" href="<?= BASEURL ?>/world">WORLD</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link active text-white" aria-current="page" href="<?= BASEURL ?>/people">PEOPLE</a>
+                <a class="nav-link active text-white" aria-current="page" href="<?= BASEURL ?>/tech">TECH</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link active text-white" aria-current="page" href="<?= BASEURL ?>/places">PLACES</a>
+                <a class="nav-link active text-white" aria-current="page" href="<?= BASEURL ?>/travel">TRAVEL</a>
               </li>
               <!-- <li class="nav-item">
                 <a class="nav-link" href="#">Link</a>

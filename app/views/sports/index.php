@@ -7,7 +7,7 @@ function limit_words($text, $limit) {
 }
 ?>
 
-<h1>This sports page</h1>
+<!-- <h1>This sports page</h1> -->
 
 <?php
 

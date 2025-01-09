@@ -7,14 +7,14 @@ function limit_words($text, $limit) {
 }
 ?>
 
-<h1>This people page</h1>
+<!-- <h1>This tech page</h1> -->
 
 <?php
 
 // Filter blogs to only show those with the 'local' category
 $localBlogs = array_filter($data['blg'], function($blg) {
     // Check if category matches 'local' (case-sensitive)
-    return isset($blg['category']) && strtolower($blg['category']) == 'people';  // Use strtolower for case-insensitive comparison
+    return isset($blg['category']) && strtolower($blg['category']) == 'tech';  // Use strtolower for case-insensitive comparison
 });
 ?>
 
