@@ -43,7 +43,14 @@ $localBlogs = array_filter($data['blg'], function($blg) {
             <div class="card-body">
               <h5 class="card-title fourth-title"><?= $blg["title"] ?></h5>
               
-              <p class="card-text fourth-text"><?= limit_words($blg["content"], 50) . " <span style='color: blue;'>..... Read More</span>" ?></p>
+ <p class="card-text fourth-text">
+  <?= limit_words($blg["content"], 50) . " <a href='" . BASEURL . "/local/detail/" . $blg['id'] . "' style='color: blue;'>..... Read More</a>" ?>
+</p>
+
+
+
+
+
 
               <p class="card-text"><small class="text-body-secondary"><?= ucwords($blg["category"]) ?></small></p>  
              

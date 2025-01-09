@@ -27,6 +27,7 @@ class Local extends Controller
         $blogModel = $this->model("Blogs_model");  // Load the model
         $data["blg"] = array_reverse($blogModel->getAllBlogs());  // Fetch all blogs from the model
         // $data["title"] = "Local";
+        $data["title"] = "Labuan Times";
         $this->view("templates/header", $data);
         $this->view("local/index", $data);
         $this->view("templates/footer");
@@ -54,9 +55,12 @@ class Local extends Controller
 
     public function detail($id)
     {
+        // $blogModel = $this->model("Blogs_model"); 
         $data["blg"] = $this->model("Blogs_model")->getBlogById($id);
+        $data['title'] = 'Labuan Times'; 
         $this->view("templates/header", $data);
         $this->view("local/detail", $data);
-        $this->view("templates/footer");
+        $this->view("templates/footer");         
     }
 }
+

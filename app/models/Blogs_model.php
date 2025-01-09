@@ -31,10 +31,24 @@ class Blogs_model
     
     public function getBlogById($id)
     {
-        $this->db->query("SELECT id, title, content, category, photo FROM blog WHERE id = :id");
+        // $this->db->query("SELECT id, title, content, category, photo FROM blog WHERE id = :id");
+        $this->db->query("SELECT * FROM blog WHERE id = :id");
         $this->db->bind(":id", $id);
         return $this->db->single();
     }
+
+//     public function getBlogById($id)
+// {
+//     // Use the query() method from the Database class to prepare the query
+//     $this->db->query("SELECT * FROM blog WHERE id = :id");
+    
+//     // Bind the ID parameter to the query
+//     $this->db->bind(':id', $id);
+    
+//     // Return the result as a single row
+//     return $this->db->single();
+// }
+
 
     public function getBlogByCategory($category) {
         // Fetch all blogs that match the provided category

@@ -8,6 +8,7 @@ class Sports extends Controller
             $blogModel = $this->model("Blogs_model");  // Load the model
             $data["blg"] = array_reverse($blogModel->getAllBlogs());  // Fetch all blogs from the model
             // $data["title"] = "Local";
+            $data["title"] = "Labuan Times";
             $this->view("templates/header", $data);
             $this->view("sports/index", $data);
             $this->view("templates/footer");
