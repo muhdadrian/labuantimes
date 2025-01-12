@@ -59,6 +59,14 @@ class Blogs_model
         return $this->db->resultSet();
     }
     
+    public function getLatestBlogs($limit = 3) {
+        // Fetch the latest blogs ordered by ID in descending order
+        $this->db->query("SELECT id, title, content, category, photo FROM blog ORDER BY id DESC LIMIT :limit");
+        $this->db->bind(':limit', $limit);
+        return $this->db->resultSet();
+    }
+    
+    
     
 
 }
