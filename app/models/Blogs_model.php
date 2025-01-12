@@ -66,6 +66,7 @@ class Blogs_model
         return $this->db->resultSet();
     }
     
+
     
     
 

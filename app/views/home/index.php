@@ -18,28 +18,37 @@ function limit_words($text, $limit) {
     <?php endforeach; ?>
   </div>
   <div class="carousel-inner">
-    <?php foreach($data['latest_blogs'] as $index => $blog): ?>
-      <div class="carousel-item <?= $index == 0 ? 'active' : '' ?>">
-        <?php
-          // If photo is stored as BLOB, convert to base64 for display
-          $photoData = $blog['photo']; // This is the binary data
-          if ($photoData) {
-              $base64Photo = base64_encode($photoData);
-              echo '<img src="data:image/jpeg;base64,' . $base64Photo . '" class="d-block w-100" alt="' . $blog['title'] . '">';
+  <?php foreach($data['latest_blogs'] as $index => $blog): ?>
+    <div class="carousel-item <?= $index == 0 ? 'active' : '' ?>">
+      <?php
+        // If photo is stored as BLOB, convert to base64 for display
+        $photoData = $blog['photo']; // This is the binary data
+        if ($photoData) {
+            $base64Photo = base64_encode($photoData);
+            // echo '<a href="' . BASEURL . '/blog/detail/' . $blog['id'] . '" style="pointer-events: auto;">';
+            // echo '<img src="data:image/jpeg;base64,' . $base64Photo . '" class="d-block w-100" alt="' . $blog['title'] . '">';
+            // echo '</a>';
+            
+    echo '<a href="' . BASEURL . '/blog/detail/' . $blog['id'] . '" style="pointer-events: auto;">';
+            echo '<img src="data:image/jpeg;base64,' . $base64Photo . '" class="d-block w-100" alt="' . $blog['title'] . '">';
+            echo '</a>';
 
-    
-          } else {
-              // Fallback image in case there's no image data
-              echo '<img src="' . BASEURL . '/img/default.jpg" class="d-block w-100" alt="' . $blog['title'] . '" loading="lazy">';
-          }
-        ?>
-        <div class="carousel-caption d-none d-md-block">
-          <h5 class="slider-title"><?= $blog['title'] ?></h5>
-          <!-- <p class="slider-text"><?= limit_words($blog['content'], 20) ?></p> -->
-        </div>
+        } else {
+            // Fallback image in case there's no image data
+            echo '<a href="' . BASEURL . '/blog/detail/' . $blog['id'] . '" style="pointer-events: auto;">';
+            echo '<img src="' . BASEURL . '/img/default.jpg" class="d-block w-100" alt="' . $blog['title'] . '" loading="lazy">';
+            echo '</a>';
+        }
+      ?>
+      <div class="carousel-caption d-none d-md-block">
+        <h5 class="slider-title"><?= $blog['title'] ?></h5>
+        <!-- <p class="slider-text"><?= limit_words($blog['content'], 20) ?></p> -->
       </div>
-    <?php endforeach; ?>
-  </div>
+    </div>
+  <?php endforeach; ?>
+</div>
+
+
   <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
     <span class="visually-hidden">Previous</span>
