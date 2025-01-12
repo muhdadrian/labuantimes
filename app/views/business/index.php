@@ -1,5 +1,5 @@
 <?php
-$text = $blg["content"];
+// $text = $blg["content"];
 
 function limit_words($text, $limit) {
   $words = explode(" ",$text);
@@ -41,9 +41,12 @@ $localBlogs = array_filter($data['blg'], function($blg) {
           </div>
           <div class="col-md-8">
             <div class="card-body">
-              <h5 class="card-title fourth-title"><?= $blg["title"] ?></h5>
+              <h5 class="card-title fourth-title list-title"><?= $blg["title"] ?></h5>
               
-              <p class="card-text fourth-text"><?= limit_words($blg["content"], 50) . " <span style='color: blue;'>..... Read More</span>" ?></p>
+              <p class="card-text fourth-text list-content">
+  <?= limit_words($blg["content"], 50) . " <a href='" . BASEURL . "/local/detail/" . $blg['id'] . "' style='color: blue;'>..... Read More</a>" ?>
+</p>
+
 
               <p class="card-text"><small class="text-body-secondary"><?= ucwords($blg["category"]) ?></small></p>  
              

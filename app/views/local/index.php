@@ -1,11 +1,21 @@
 <?php
-$text = $blg["content"];
+// $text = $blg["content"];
 
 function limit_words($text, $limit) {
   $words = explode(" ",$text);
   return implode(" ",array_splice($words,0,$limit));
 }
 ?>
+
+<!-- <?php
+if (isset($blg) && is_array($blg)) {
+    // Access array offsets here safely
+    echo $blg['key'];  // Replace 'key' with the actual key you need
+} else {
+    echo "No blog data available.";
+}
+?> -->
+
 
 <!-- <h1>This local page</h1> -->
 
@@ -41,17 +51,11 @@ $localBlogs = array_filter($data['blg'], function($blg) {
           </div>
           <div class="col-md-8">
             <div class="card-body">
-              <h5 class="card-title fourth-title"><?= $blg["title"] ?></h5>
+              <h5 class="card-title fourth-title list-title"><?= $blg["title"] ?></h5>
               
- <p class="card-text fourth-text">
+ <p class="card-text fourth-text list-content">
   <?= limit_words($blg["content"], 50) . " <a href='" . BASEURL . "/local/detail/" . $blg['id'] . "' style='color: blue;'>..... Read More</a>" ?>
 </p>
-
-
-
-
-
-
               <p class="card-text"><small class="text-body-secondary"><?= ucwords($blg["category"]) ?></small></p>  
              
             </div>

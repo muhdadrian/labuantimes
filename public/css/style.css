@@ -173,7 +173,36 @@ footer {
 .copyright {
     text-align: center;
     margin-top: 1.5rem;
+    font-family: "Canterbury", serif;
+}
+
+/* In index.php */
+
+.list-title {
     font-family: "Poppins", serif;
-    font-weight: 200;
+    font-size: 1.6rem;
+    font-weight: 500;
+}
+
+.list-content {
+    font-family: "Poppins", serif;
+    font-size: 1.2rem;
+    font-weight: 300;
+
+}
+
+/* In detail.php */
+
+.detail-title {
+    margin-left: 2.2rem;
+    font-weight: 300;
+}
+
+.detail-content {
+    margin-left: 2.2rem;
+    font-size: 1.2rem;
+    font-weight: 300;
+    text-align: justify;
+    margin-right: 2.2rem;
 }
 

@@ -34,4 +34,3 @@ if (isset($data["blg"])) {
 }
 ?>
 
-

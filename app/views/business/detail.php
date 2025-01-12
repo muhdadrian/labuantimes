@@ -33,5 +33,3 @@ if (isset($data["blg"])) {
     echo "Blog post not found.";
 }
 ?>
-
-

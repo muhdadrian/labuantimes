@@ -21,7 +21,7 @@ if (isset($data["blg"])) {
 
     // echo "<img src='data:image/jpeg;base64," . base64_encode($data["blg"]["photo"]) . "' alt='Blog Photo' />";
 
-    echo "<img class='img-fluid rounded mx-auto d-block img-detail' src='data:image/jpeg;base64," . base64_encode($data["blg"]["photo"]) . "' alt='Blog Photo' />";
+    echo "<img class='img-fluid rounded mx-auto d-block' src='data:image/jpeg;base64," . base64_encode($data["blg"]["photo"]) . "' alt='Blog Photo' />";
 
     
 
@@ -33,5 +33,3 @@ if (isset($data["blg"])) {
     echo "Blog post not found.";
 }
 ?>
-
-
