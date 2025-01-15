@@ -6,14 +6,11 @@ class Home extends Controller
     {
         // $data["title"] = "Home";
         $blogModel = $this->model("Blogs_model");  
-
         // Fetch the latest three blogs for the carousel
-        $data["latest_blogs"] = $blogModel->getLatestBlogs(3);
-        
+        $data["latest_blogs"] = $blogModel->getLatestBlogs(3);    
         // $data["blg"] = array_reverse($blogModel->getAllBlogs());
         $data["title"] = "Labuan Times";
         // $data['name'] = $this->model('User_model')->getUser();
-    
         $this->view("templates/header", $data);
         $this->view("home/index", $data);
         $this->view("templates/footer");
@@ -25,10 +22,13 @@ class Home extends Controller
         $data["blg"] = $this->model("Blogs_model")->getBlogById($id);
         $data['title'] = 'Labuan Times'; 
         $this->view("templates/header", $data);
-        $this->view("home/travel[$id]", $data);
-        $this->view("templates/footer");         
+        $this->view("home/detail", $data);
+        // $this->view("$id");
+        $this->view("templates/footer");       
+        //var_dump($this->model("Blogs_model")->getBlogById($id)); // For debugging
+  
     }
-
+    
     // public function detail($category, $id)
     // {
     //     // $blogModel = $this->model("Blogs_model"); 
@@ -39,9 +39,7 @@ class Home extends Controller
     //     $this->view("templates/header", $data);
     //     $this->view("home/", $data);
     //     $this->view("templates/footer");         
-    // }
-
-    
+    // }    
 }
 
 

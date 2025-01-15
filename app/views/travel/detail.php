@@ -1,5 +1,7 @@
 <?php
 
+
+
 // Capture the ID from the URL path (without query string)
 // $path = $_SERVER['REQUEST_URI'];
 // $segments = explode('/', $path);
