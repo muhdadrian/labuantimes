@@ -4,8 +4,9 @@ class Contact extends Controller
 {
     public function index()
     {
-        $this->view("templates/header");
-        $this->view("contact/index");
+        $data["title"] = "Labuan Times";
+        $this->view("templates/header", $data);
+        $this->view("contact/index", $data);
         $this->view("templates/footer");
     }
 }
