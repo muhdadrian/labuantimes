@@ -157,7 +157,28 @@
 		font-weight: 300;
 	
 	}
+
+
+	.form {
+		padding: 2rem 5rem ;
+		
+	}
 	
+	.homepage {
+		padding: 0.5rem;
+	}
+
+.carousel,
+.carousel-item {
+  height: 50vh; /* 70% of the viewport height */
+}
+
+.carousel-item img {
+  object-fit: cover; /* Ensure the image fills the space without stretching */
+  height: 100%;
+  width: 100%;
+}
+
 
     
 	/* .news-bar {

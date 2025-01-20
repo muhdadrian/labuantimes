@@ -34,7 +34,7 @@ a:active {
 
 .header {
     text-align: center;
-    font-size: 4.5rem;
+    font-size: 4rem;
     text-align: center;
     font-family: "canterburyregular", Arial, Helvetica, sans-serif;
     color: black;
@@ -205,4 +205,47 @@ footer {
     text-align: justify;
     margin-right: 2.2rem;
 }
+
+/* In about.php */
+
+.about-text {
+    font-family: "Poppins", serif;
+    font-weight: 300;
+    font-size: 1.3rem;
+    padding: 1% 5%;
+    text-align: justify;
+}
+
+/* contact-form */
+
+.contact-header {
+    font-family: "Poppins", serif;
+    font-size: 2rem;
+    font-weight: 200;
+    text-align: center;
+    padding-top: 2rem;
+}
+
+.contact-form {
+    font-weight: 700;
+}
+
+.form {
+    padding: 2rem 10rem ;
+}
+ 
+  .contact-form-btn .btn {
+    /* Ensures the buttons have a consistent width */
+    min-width: 100px; 
+  }
+
+  .response {
+    font-family: "Poppins", serif;
+    font-weight: 300;
+  }
+
+  /* homepage */
+  .homepage {
+    padding: 0.5rem 3rem;
+  }
 
